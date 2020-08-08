@@ -12,8 +12,8 @@ clear
 tput cup 0 0
 while :
 	do for i in $(eval echo {1..$screenlines})
-		do for i in $(eval echo {1..$screencols})
-			do rand=$(($RANDOM%$spacing))
+		do for in $(eval echo {1..$screencols})
+			do rand=$(($RANDOM%spacing))
 				case $rand in
 					0)
 						printf "${colors[$RANDOM%$colorcount]}${chars[$RANDOM%$count]} "
@@ -32,3 +32,4 @@ while :
 		done
 		tput cup 0 0
 	done
+i
